@@ -1,0 +1,28 @@
+<div>
+  <input placeholder="Enter Customer ID" [(ngModel)]="customerId">
+  <input placeholder="Enter Initial Credit" [(ngModel)]="initialCredit">
+</div>
+<div>
+  <button (click)="OpenAccount()"> Open Account</button>
+</div>
+
+<hr>
+
+<h4>Users List</h4>
+
+<div>
+  <table style="border:solid 1px ;">
+    <tr style="border:solid 1px ;">
+      <th style="border:solid 1px ;">Name</th>
+      <th style="border:solid 1px ;">SurName</th>
+      <th style="border:solid 1px ;">Balance</th>
+      <th style="border:solid 1px ;">Transactions</th>
+    </tr>
+    <tr *ngFor="let user of users">
+      <td style="border:solid 1px ;">{{user.name}}</td>
+      <td style="border:solid 1px ;">{{user.surName}}</td>
+      <td style="border:solid 1px ;">{{user.balance}}</td>
+      <td style="border:solid 1px ;">{{user.transactions}}</td>
+    </tr>
+  </table>
+</div>
